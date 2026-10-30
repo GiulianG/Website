@@ -25,6 +25,28 @@ header {
   background: white;
 }
 
+html,
+body,
+.custom-pointer {
+  cursor: url('../images/cursor.png') 8 0, auto;
+}
+
+a,
+button,
+.contact-link,
+.nav-links a,
+.nav-icon {
+  cursor: url('../images/cursor.png') 8 0, pointer;
+}
+
+a,
+button,
+.contact-link,
+.nav-links a,
+.nav-icon, img:hover {
+  cursor: url('../images/cursor.png') 8 0, pointer;
+}
+
 /* ---------- BLOCK BACKGROUND ---------- */
 
 #block-grid {

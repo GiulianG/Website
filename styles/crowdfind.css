@@ -23,6 +23,28 @@ body {
   overflow-x: hidden;
 }
 
+html,
+body,
+.custom-pointer {
+  cursor: url('../images/cursor.png') 8 0, auto;
+}
+
+a,
+button,
+.contact-link,
+.nav-links a,
+.nav-icon {
+  cursor: url('../images/cursor.png') 8 0, pointer;
+}
+
+a,
+button,
+.contact-link,
+.nav-links a,
+.nav-icon:hover {
+  cursor: url('../images/cursor.png') 8 0, pointer;
+}
+
 /* ---------- BLOCK BACKGROUND ---------- */
 
 #block-grid {
