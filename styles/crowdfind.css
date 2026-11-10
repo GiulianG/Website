@@ -157,18 +157,7 @@ button,
   transform: translateY(1px);
 }
 
-/* ---------- SCROLL REVEAL ---------- */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* ---------- MAIN ---------- */
 
@@ -187,25 +176,20 @@ main {
 }
 
 .cs-hero-image {
-  /* Set this to your iframe's width / height (Figma's default embed is 800 / 450) */
-  --proto-ratio: 800 / 450;
+  /* Set this to your iframe's width / height */
+  --proto-ratio: 1000 / 450;
 
-  flex-shrink: 0;
-  width: 480px;
-  aspect-ratio: var(--proto-ratio);
-}
-
-.cs-hero-img {
   width: 100%;
-  height: auto;
-  border-radius: 24px;
+  max-width: 1000px;
+  margin-top: 48px;
+  aspect-ratio: var(--proto-ratio);
 }
 
 .cs-hero-image iframe {
   display: block;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: 3px solid #b8b8b8;
   border-radius: 24px;
 }
 
@@ -360,140 +344,23 @@ main {
   margin: 0 auto 48px;
 }
 
-/* ---------- PROBLEM GRID ---------- */
+/* ---------- PROSE ---------- */
 
-.cs-problem-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.cf-prose .cs-body {
+  max-width: 680px;
+  margin-bottom: 20px;
 }
 
-.cs-problem-card {
-  background: rgba(245, 245, 206, 0.4);
-  border: 1px solid rgba(62, 74, 61, 0.15);
-  border-radius: 16px;
-  padding: 20px;
-}
-
-.cs-problem-num {
-  display: block;
-  font-family: 'MyFont', sans-serif;
-  font-size: 22px;
-  color: #3E4A3D;
-  margin-bottom: 10px;
-}
-
-.cs-problem-card p {
-  font-size: 13px;
-  font-weight: 300;
-  color: #555;
-  line-height: 1.65;
-}
-
-/* ---------- FEATURE LIST ---------- */
-
-.cs-feature-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.cs-feature-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.cs-feature-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #3E4A3D;
-  flex-shrink: 0;
-  margin-top: 6px;
-}
-
-.cs-feature-item h3 {
-  font-size: 15px;
+.cf-prose h3 {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 18px;
   font-weight: 500;
   color: #111;
-  margin-bottom: 4px;
+  margin: 28px 0 8px;
 }
 
-.cs-feature-item p {
-  font-size: 13px;
-  font-weight: 300;
-  color: #666;
-  line-height: 1.65;
-}
-
-/* ---------- AUDIENCE GRID ---------- */
-
-.cs-audience-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.cs-audience-card {
-  background: rgba(245, 245, 206, 0.35);
-  border: 1px solid rgba(62, 74, 61, 0.15);
-  border-radius: 20px;
-  padding: 32px 28px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-
-.cs-audience-icon {
-  display: block;
-  font-size: 28px;
-  margin-bottom: 14px;
-}
-
-.cs-audience-card h3 {
-  font-size: 16px;
-  font-weight: 500;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.cs-audience-card p {
-  font-size: 13px;
-  font-weight: 300;
-  color: #666;
-  line-height: 1.65;
-}
-
-/* ---------- ROLE GRID ---------- */
-
-.cs-role-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.cs-role-card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #ebebeb;
-  border-radius: 14px;
-  padding: 18px 20px;
-}
-
-.cs-role-label {
-  display: block;
-  font-family: 'MyFont', sans-serif;
-  font-size: 14px;
-  color: #3E4A3D;
-  margin-bottom: 8px;
-}
-
-.cs-role-card p {
-  font-size: 12px;
-  font-weight: 300;
-  color: #666;
-  line-height: 1.6;
+.cf-prose h3:first-child {
+  margin-top: 0;
 }
 
 /* ---------- COLOR PALETTE ---------- */
@@ -519,6 +386,10 @@ main {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
+.cs-swatch-outlined {
+  border: 3px solid #b8b8b8;
+}
+
 .cs-swatch-hex {
   font-size: 12px;
   font-weight: 500;
@@ -530,91 +401,6 @@ main {
   font-size: 12px;
   font-weight: 300;
   color: #999;
-}
-
-/* ---------- PROCESS TIMELINE ---------- */
-
-.cs-process-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-left: 28px;
-  border-left: 2px solid #e8e8e8;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.cs-process-item {
-  position: relative;
-}
-
-.cs-process-node {
-  position: absolute;
-  left: -36px;
-  top: 20px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 0 0 2px #ddd;
-}
-
-.cs-process-card {
-  background: rgba(245, 245, 206, 0.3);
-  border: 1px solid rgba(62, 74, 61, 0.12);
-  border-radius: 16px;
-  padding: 20px 24px;
-}
-
-.cs-process-date {
-  display: block;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #aaa;
-  margin-bottom: 6px;
-}
-
-.cs-process-card h3 {
-  font-size: 15px;
-  font-weight: 500;
-  color: #111;
-  margin-bottom: 6px;
-}
-
-.cs-process-card p {
-  font-size: 13px;
-  font-weight: 300;
-  color: #666;
-  line-height: 1.6;
-}
-
-/* ---------- CTA BLOCK ---------- */
-
-.cs-cta-block {
-  text-align: center;
-  padding: 20px 0 40px;
-}
-
-.cs-cta-btn {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 14px 32px;
-  background: #3E4A3D;
-  color: #F5F5CE;
-  text-decoration: none;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 4px 16px rgba(62, 74, 61, 0.25);
-}
-
-.cs-cta-btn:hover {
-  opacity: 0.88;
-  transform: translateY(-2px);
 }
 
 /* ---------- FOOTER ---------- */
@@ -646,47 +432,31 @@ main {
   opacity: 0.7;
 }
 
-
-/* =========================================================
-   RESPONSIVE DESIGN
-========================================================= */
-
-
-
 @media (max-width: 768px) {
 
   /* ---------- NAVBAR ---------- */
 
   .navbar {
     justify-content: center;
-
-    padding:
-      90px 15px 20px;
-
+    padding: 90px 15px 20px;
     top: 10px;
   }
 
   .nav-icon {
     top: 5px;
     left: 50%;
-
-    transform:
-      translateX(-50%);
+    transform: translateX(-50%);
   }
 
   .nav-links {
     width: 100%;
-
     justify-content: center;
-
     gap: 6px;
   }
 
   .nav-links a {
     min-width: 90px;
-
     height: 45px;
-
     font-size: 12px;
   }
 
@@ -696,26 +466,13 @@ main {
     padding: 40px 20px 0;
   }
 
-
   .cs-hero {
     padding-bottom: 48px;
   }
 
-  .cs-hero:has(> .cs-hero-image),
-  .cs-hero :has(> .cs-hero-image) {
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
-  }
-
   .cs-hero-image {
-    --proto-ratio: 3 / 4;
- 
-    order: 1;
-    align-self: center;
- 
-    width: 90%;
-    max-width: 480px;
+    --proto-ratio: 4 / 3;
+    margin-top: 36px;
   }
 
   .cs-title {
@@ -757,22 +514,11 @@ main {
     margin-bottom: 32px;
   }
 
-  /* ---------- GRIDS ---------- */
+  /* ---------- PALETTE ---------- */
 
-  .cs-role-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cs-audience-card {
-    padding: 26px 22px;
-  }
-
-  /* ---------- TIMELINE ---------- */
-
-  .cs-process-card {
-    padding: 18px 20px;
+  .cs-swatch-block {
+    width: 100px;
+    height: 100px;
   }
 
 }
-
-

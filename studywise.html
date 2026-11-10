@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studywise — Giulian Giannone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/sensible.css">
+  <link rel="stylesheet" href="styles/studywise.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="nav-icon">
+      <img src="images/test.png" alt="Home">
+    </a>
+    <nav class="nav-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div id="block-grid"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="cs-hero">
+      <div class="cs-hero-text">
+        <span class="cs-eyebrow">Product Design · Web Development · Next.js</span>
+        <h1 class="cs-title">Studywise</h1>
+        <p class="cs-subtitle">A free, immersive study space that also keeps track of how much you actually study.</p>
+        <div class="cs-meta-row">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Date</span>
+            <!-- TODO: replace with your real date -->
+            <span class="cs-meta-value">2026</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span class="cs-meta-value">Designer &amp; Developer</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Stack</span>
+            <span class="cs-meta-value">Next.js, TypeScript, CSS</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-hero-image">
+        <img class="sw-hero-shot" src="images/studywise/home.png" alt="Studywise Pomodoro Mode screen with break options and a start button">
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- THE PROBLEM -->
+    <section class="cs-section cs-two-col reveal">
+      <div class="cs-section-label-col">
+        <span class="cs-section-label">The Problem</span>
+      </div>
+      <div class="cs-section-content sw-prose">
+        <p class="cs-body">High school and university students rarely have one place to see how long they have studied and another place to practise study habits like the Pomodoro technique. Most students juggle a timer, a notes app and a task list, and none of them show how study time adds up over a week.</p>
+        <p class="cs-body">The tools that do cover both tend to feel flat or hold back what students want most. A bright screen with white noise that doesn't match what you're looking at is not immersive, and the weekly study graph is often locked behind a paywall. The most immersive option I found only runs on iOS, which leaves anyone studying on a laptop out.</p>
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- RESEARCH -->
+    <section class="cs-section cs-two-col reveal">
+      <div class="cs-section-label-col">
+        <span class="cs-section-label">Research</span>
+      </div>
+      <div class="cs-section-content sw-prose">
+        <h2 class="cs-heading">What Flocus and FocusFlight get right, and where they stop.</h2>
+        <p class="cs-body">Before designing anything I reviewed two study apps. Each one solved half of the problem.</p>
+
+        <h3>Flocus</h3>
+        <p class="cs-body">Flocus is a web app that pairs the Pomodoro technique with white noise. Its features are easy to reach and the look is sleek and minimal, and it includes a task list, an ambient forest mode and a Pomodoro study mode. The bright background is harsh on the eyes and can pull focus away from studying, though, and the home page shows only the time even though most people come for the timer. The weekly study graph is behind a paywall.</p>
+
+        <h3>FocusFlight</h3>
+        <p class="cs-body">FocusFlight turns each session into a virtual flight between real airports, so a London to Paris focus session lasts as long as the real flight. Booking a flight, tearing the ticket and boarding creates a clear "mode switch" before a session, and cabin noise plays throughout. It is iOS only with no web version, and it tracks miles and badges but has no dashboard of hours per day or week, no streaks and no study goals.</p>
+
+        <h3>How Studywise compares</h3>
+        <p class="cs-body">Flocus has the tracking but not the atmosphere, and FocusFlight has the atmosphere but not the tracking. Studywise combines both and runs in a browser.</p>
+
+        <div class="sw-table-wrap">
+          <table class="sw-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Flocus</th>
+                <th>FocusFlight</th>
+                <th class="sw-us">Studywise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Platform</th>
+                <td>Web</td>
+                <td>iOS only</td>
+                <td class="sw-us">Web, on any device</td>
+              </tr>
+              <tr>
+                <th scope="row">Cost</th>
+                <td>Study graph is paid</td>
+                <td>$3.99/month or $23.99/year</td>
+                <td class="sw-us">Core features free; extra detailed stats may be paid, plus optional donations</td>
+              </tr>
+              <tr>
+                <th scope="row">Immersion</th>
+                <td>Forest ambience, white noise</td>
+                <td>Flight map, ticket ritual, cabin noise</td>
+                <td class="sw-us">Cafe, library, train, plane and car themes with matching audio</td>
+              </tr>
+              <tr>
+                <th scope="row">Study stats</th>
+                <td>Paywalled</td>
+                <td>Miles and badges, no study dashboard</td>
+                <td class="sw-us">Time per subject and graphs</td>
+              </tr>
+              <tr>
+                <th scope="row">Community</th>
+                <td>Not a focus</td>
+                <td>Not a focus</td>
+                <td class="sw-us">Weekly leaderboard</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- THE OPPORTUNITY -->
+    <section class="cs-section cs-two-col reveal">
+      <div class="cs-section-label-col">
+        <span class="cs-section-label">The Opportunity</span>
+      </div>
+      <div class="cs-section-content sw-prose">
+        <h2 class="cs-heading">What if the immersive study app and the study tracker were the same free product?</h2>
+        <p class="cs-body">Studywise is built for high school and university students who want somewhere to study, a way to build habits like Pomodoro and a clear record of their effort. The main features are free so nobody has to pay to see their own study time. Detailed statistics could sit behind an optional paywall, and I could add a donation link similar to Wikipedia's.</p>
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- THE SOLUTION -->
+    <section class="cs-section cs-two-col reveal">
+      <div class="cs-section-label-col">
+        <span class="cs-section-label">The Solution</span>
+      </div>
+      <div class="cs-section-content sw-prose">
+        <h2 class="cs-heading">A short path from opening the site to studying.</h2>
+        <p class="cs-body">When students open Studywise they choose between a themed study session and a blank Pomodoro session, then say whether they are studying for a particular course. They study, and the minutes are logged to their account automatically. When they're done they can leave, and their stats and leaderboard position are there next time.</p>
+        <figure class="sw-figure">
+          <img class="sw-shot" src="images/studywise/pomodoro.png" alt="Pomodoro Mode with long, short and custom break options">
+          <figcaption>Pomodoro Mode lets students pick a long, short or custom break so the timer fits their session.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- KEY FEATURES -->
+    <section class="cs-section cs-two-col reveal">
+      <div class="cs-section-label-col">
+        <span class="cs-section-label">Key Features</span>
+      </div>
+      <div class="cs-section-content sw-prose">
+        <h2 class="cs-heading">Quantify Your Study Time.</h2>
+        <p class="cs-body">Studywise tracks how long you study for each subject and shows graphs of those sessions across the week. This answers the missing dashboard in FocusFlight and the paywall in Flocus.</p>
+        <figure class="sw-figure">
+          <img class="sw-shot" src="images/studywise/statistics.png" alt="Statistics screen showing focus time, break time, ranking and a weekly focus chart">
+          <figcaption>The statistics screen shows focus time, break time, weekly ranking and a chart of focus hours from Monday to Sunday.</figcaption>
+        </figure>
+        <p class="cs-body">A ranked leaderboard shows how long everyone has studied each week and resets every Sunday at 11:59 pm. Immersive themes let you study in a cafe, library, train, plane or car with audio to match. For transport themes you can show a progress bar of your trip or choose a blurred view out of the window. Finally, the Pomodoro timer is adjustable, so students can change the study and break lengths to fit their session.</p>
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- VISUAL DESIGN -->
+    <section class="cs-section reveal">
+      <div class="cs-section-label-centered">
+        <span class="cs-section-label">Visual &amp; Audio</span>
+        <h2 class="cs-heading-center">Dark and quiet, so the environment stands out.</h2>
+        <p class="cs-body-center">Flocus's bright background was the first thing I wanted to avoid. Studywise uses dark grays with a small palette and a single soft blue-purple accent, so nothing competes with the study session. Audio follows the theme, and on the home page you can choose any sound from the catalog.</p>
+      </div>
+      <div class="cs-palette-row">
+        <div class="cs-swatch">
+          <div class="cs-swatch-block" style="background:#1F1F1F;"></div>
+          <span class="cs-swatch-hex">#1F1F1F</span>
+        </div>
+        <div class="cs-swatch">
+          <div class="cs-swatch-block" style="background:#CACACA;"></div>
+          <span class="cs-swatch-hex">#CACACA</span>
+        </div>
+        <div class="cs-swatch">
+          <div class="cs-swatch-block" style="background:#D9D9D9;"></div>
+          <span class="cs-swatch-hex">#D9D9D9</span>
+        </div>
+        <div class="cs-swatch">
+          <div class="cs-swatch-block" style="background:#8399FF;"></div>
+          <span class="cs-swatch-hex">#8399FF</span>
+        </div>
+        <div class="cs-swatch">
+          <div class="cs-swatch-block" style="background:#A298F3;"></div>
+          <span class="cs-swatch-hex">#A298F3</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- THE BUILD -->
+    <section class="cs-section cs-two-col reveal">
+      <div class="cs-section-label-col">
+        <span class="cs-section-label">The Build</span>
+      </div>
+      <div class="cs-section-content sw-prose">
+        <h2 class="cs-heading">Designed and built end to end.</h2>
+        <p class="cs-body">I designed the product and wrote the code myself using Next.js, TypeScript and plain CSS, with the site hosted on Netlify and connected to GitHub. Building it myself meant I could test every design decision in the browser straight away.</p>
+        <p class="cs-body">Choosing a trip uses a searchable destination combobox, so you can type a place instead of scrolling a long list. Routes come in curated sets, with duration keys prefixed by transport mode so a train trip and a flight can't be mixed up. Ambient audio follows browser autoplay rules, so sound starts from a user action instead of being blocked. A dimness and volume panel lets students tune how immersive the screen feels, and a focus mode removes everything except the session.</p>
+      </div>
+    </section>
+
+    <div class="cs-divider"></div>
+
+    <!-- WHAT'S NEXT -->
+    <section class="cs-section cs-two-col reveal">
+      <div class="cs-section-label-col">
+        <span class="cs-section-label">What's Next</span>
+      </div>
+      <div class="cs-section-content sw-prose">
+        <h2 class="cs-heading">Where Studywise goes from here.</h2>
+        <p class="cs-body">The next step is user testing. Watching students use the site will show whether the themes help them focus or distract them. After that I want to add more environments and a bigger sound catalog to keep long-term users from getting bored, and to build out the detailed statistics that could be offered as an optional upgrade while the core product stays free.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cs-footer">
+      <a href="index.html" class="cs-back-link">← Back to Portfolio</a>
+    </footer>
+
+  </main>
+
+
+</body>
+</html>

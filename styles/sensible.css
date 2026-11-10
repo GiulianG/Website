@@ -601,6 +601,84 @@ main {
 
 
 /* =========================================================
+   STORY LAYOUT (paragraph-based case study pages)
+========================================================= */
+
+/* ---------- PROSE ---------- */
+
+.st-prose .cs-body {
+  max-width: 680px;
+}
+
+.st-prose h3 {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  margin: 28px 0 8px;
+}
+
+.st-prose h3:first-child {
+  margin-top: 0;
+}
+
+.st-when {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #3997EE;
+  margin-bottom: 8px;
+}
+
+/* ---------- TEXT BESIDE A PHONE SCREEN ---------- */
+
+.st-split {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.st-split-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.st-split-text .cs-body {
+  max-width: 560px;
+}
+
+.st-figure {
+  flex-shrink: 0;
+  width: 240px;
+  margin: 0;
+}
+
+.st-figure figcaption {
+  font-size: 12px;
+  font-weight: 300;
+  color: #999;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* ---------- SCREENSHOTS (clearly outlined) ---------- */
+
+.st-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid #b8b8b8;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.18);
+}
+
+.st-shot-dark {
+  background: #000335;
+}
+
+
+/* =========================================================
    RESPONSIVE DESIGN
 ========================================================= */
 
@@ -631,9 +709,6 @@ main {
   }
 
 }
-
-
-/* ---------- STACK PHOTO + TEXT, REFLOW GRIDS ---------- */
 
 @media (max-width: 768px) {
 
@@ -739,7 +814,7 @@ main {
 
   /* ---------- GRIDS ---------- */
 
-    cs-problem-grid,
+  .cs-problem-grid,
   .cs-usecase-grid {
     grid-template-columns: 1fr;
   }
@@ -750,7 +825,17 @@ main {
     padding: 18px 20px;
   }
 
+  /* ---------- STORY LAYOUT ---------- */
+
+  .st-split {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .st-figure {
+    width: 70%;
+    max-width: 260px;
+    align-self: center;
+  }
 
 }
-
-
